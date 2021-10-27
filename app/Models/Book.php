@@ -22,7 +22,7 @@ class Book extends Model
     use HasFactory;
 
     public $table = 'books';
-    
+
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
 
@@ -57,13 +57,13 @@ class Book extends Model
      * @var array
      */
     public static $rules = [
-        'title' => 'required|string|max:255',
-        'author' => 'required|string|max:255',
-        'publisher' => 'required|string|max:255',
-        'publish_date' => 'required|string|max:255',
+        'title' => 'required|string|max:75',
+        'author' => 'required|string|max:100',
+        'publisher' => 'required|string|max:100',
+        'publish_date' => 'required|string|max:50',
         'created_at' => 'nullable',
         'updated_at' => 'nullable'
     ];
 
-    
+
 }
